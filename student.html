@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
+
+
     <head>
     <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Student Page</title>
-        <link rel="stylesheet" href="tutorcss.css">
+        <link rel="stylesheet" href="studentcss.css">
         <h2>Student Page</h2>
+
+    <style>
+	#searchBox {
+    		background-color: #F5F5F5;
+		margin: 50px 50px;
+    		float: right;
+		margin-right:600px;
+	}
+    </style>
        
     </head>
     
@@ -20,21 +31,31 @@
           <li><a href="#about">About</a></li>
         -->
         </ul>
-        <br>
-            
-            <img src="http://freelanceme.net/Images/default%20profile%20picture.png"><br>
+        
+	
+
+	<br>
+	   <form>
+            <div id="searchBox">
+		<input type="search" id="q" placeholder="Search for Tutor">
+		<button onclick="myFunction(); return false;">Search</button>
+		<p id="searcher"></p>
+		<script>
+		function myFunction() {
+    		   var x = q.value;
+    		   document.getElementById("searcher").innerHTML = x;
+		}
+		</script>
+	    </div>
+	   </form>
+
+<p><img src="http://freelanceme.net/Images/default%20profile%20picture.png"></p></br>
             <h4>Name: Wojciech Wojciechowski</h4>
             <h4>School: Syracuse University</h4>
-	    <p><center>List of Classes</center><p>
-	    <p><ol>
-		<li>Biology</li>
-		<li>Chemistry</li>
-		<li>Math</li>
-		<li>Physics</li>
-	    </ol><p>
-    
-            
-            
-        
+	    <p>List of Classes<p>
+	    <ul>
+	      <li>Bio</li>
+	      <br><li>Chem</li></br>
+	    </ul>
     </body>
 </html>
