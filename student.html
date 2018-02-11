@@ -14,7 +14,13 @@
     		background-color: #F5F5F5;
 		margin: 50px 50px;
     		float: right;
-		margin-right:600px;
+		margin-right:700px;
+	}
+	#searchBox2 {
+    		background-color: #F4F4F4;
+		margin: 50px 50px;
+    		float: right;
+		margin-right:700px;
 	}
     </style>
        
@@ -49,13 +55,29 @@
 	    </div>
 	   </form>
 
+	   <form>
+            <div id="searchBox2">
+		<input type="search" id="p" placeholder="Search for Classes">
+		<button onclick="myFunction2(); return false;">Search</button>
+		<p id="searcher2"></p>
+		<script>
+		function myFunction2() {
+    		   var y = p.value;
+    		   document.getElementById("searcher2").innerHTML = y;
+		}
+		</script>
+	    </div>
+	   </form>
+
 <p><img src="http://freelanceme.net/Images/default%20profile%20picture.png"></p></br>
             <h4>Name: Wojciech Wojciechowski</h4>
             <h4>School: Syracuse University</h4>
-	    <p>List of Classes<p>
+	    <p>Current Classes<p>
 	    <ul>
 	      <li>Bio</li>
 	      <br><li>Chem</li></br>
+	      <li>Math</li>
 	    </ul>
+	    <br><p><a class = "active" href="Classes.html">List of all Classes</a></p></br>
     </body>
 </html>
