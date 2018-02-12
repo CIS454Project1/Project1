@@ -61,9 +61,29 @@
 		<button onclick="myFunction2(); return false;">Search</button>
 		<p id="searcher2"></p>
 		<script>
-		function myFunction2() {
+		function myFunction2() 	{
+		   var cS = "chemistry";
+		   var Chem = cS.link("Classes.html");
+		   var bS = "biology";
+		   var Bio = bS.link("Classes.html");
+		   var mS = "math";
+		   var Math = mS.link("Classes.html");
     		   var y = p.value;
-    		   document.getElementById("searcher2").innerHTML = y;
+		   var returnVal = y;
+		   if (cS.includes(y)) {
+			returnVal = Chem;
+		   }
+		   else if (bS.includes(y)) {
+			returnVal = Bio;
+		   }
+		   else if (mS.includes(y)) {
+			returnVal = Math;
+		   }
+		   else {
+			returnVal = "Class not found";
+		   }
+		   document.getElementById("searcher2").innerHTML = returnVal;
+		   
 		}
 		</script>
 	    </div>
